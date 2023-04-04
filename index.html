@@ -53,6 +53,19 @@
   simRadio.addEventListener("change", function() {
     if (simRadio.checked) {
       alert("Prometo te amar pra sempre gatinha! <3");
+	    const btnSim = document.getElementById('btn-sim');
+
+// função que muda a posição do botão
+function moverBotao() {
+  const novaPosicaoX = Math.floor(Math.random() * window.innerWidth);
+  const novaPosicaoY = Math.floor(Math.random() * window.innerHeight);
+  btnSim.style.left = `${novaPosicaoX}px`;
+  btnSim.style.top = `${novaPosicaoY}px`;
+}
+
+// evento que chama a função quando o botão "Sim" é clicado
+btnSim.addEventListener('click', moverBotao);
+
     }
   });
 </script>
